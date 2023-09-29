@@ -7,4 +7,3 @@ const AllEventsPage = () => {
 };
 
 export default AllEventsPage;
-s;
