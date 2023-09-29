@@ -11,11 +11,7 @@ const Button = ({ children, link }) => {
     );
   }
 
-  return (
-    <button className={classes.name} onClick={() => {}}>
-      {children}
-    </button>
-  );
+  return <button className={classes.name}>{children}</button>;
 };
 
 export default Button;

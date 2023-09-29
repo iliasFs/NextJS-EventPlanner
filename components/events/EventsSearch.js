@@ -15,6 +15,8 @@ const EventsSearch = ({ onSearch }) => {
 
     const selectedYear = yearInputRef.current.value;
     const selectedMonth = monthInputRef.current.value;
+
+    onSearch(selectedYear, selectedMonth);
   };
 
   return (
