@@ -1,3 +1,5 @@
+//Static generation => We use getStaticProps
+
 import EventList from "@/components/events/EventList";
 import { getFeaturedEvents } from "../helpers/api-utli";
 
