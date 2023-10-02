@@ -2,10 +2,11 @@ import React, { useLayoutEffect } from "react";
 import EventItem from "./EventItem";
 import classes from "./EventList.module.css";
 
-const EventList = ({ events }) => {
+const EventList = (props) => {
+  const { items } = props;
   return (
     <ul className={classes.list}>
-      {events.map((event) => (
+      {items.map((event) => (
         <EventItem event={event} key={event.id} />
       ))}
     </ul>
