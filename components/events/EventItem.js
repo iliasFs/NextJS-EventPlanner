@@ -5,6 +5,8 @@ import Button from "../UI/Button";
 import DateIcon from "../icons/dateIcon";
 import AddressIcon from "../icons/addressIcons";
 import ArrowRightIcon from "../icons/arrowRightIcon";
+//Optimize images
+import Image from "next/image";
 
 const EventItem = ({ event }) => {
   const humanReadableDate = new Date(event.date).toLocaleDateString("en-US", {
@@ -19,7 +21,12 @@ const EventItem = ({ event }) => {
 
   return (
     <li className={classes.item}>
-      <img src={"/" + event.image} alt={event.title} />
+      <Image
+        src={"/" + event.image}
+        alt={event.title}
+        width={340}
+        height={160}
+      />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{event.title}</h2>
