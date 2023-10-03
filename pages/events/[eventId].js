@@ -8,7 +8,11 @@ const EventDetailPage = (props) => {
   const event = props.selectedEvent;
 
   if (!event) {
-    return <p>Data Not Found</p>;
+    return (
+      <div className="center">
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   return (
@@ -35,6 +39,7 @@ export async function getStaticProps(context) {
     props: {
       selectedEvent: event,
     },
+    revalidate: 30,
   };
 }
 
